@@ -1,0 +1,203 @@
+/*custom styles*/
+/*by Elisabeth Parker*/
+
+/*NAVIGATION BARS*/
+/*Shared styles for horizontal menus like nav-bar and icon-bar*/
+.horizontal > li {
+  float: right;
+}
+
+/*top nav bar with "MINI of Raleigh", help and settings*/
+.nav-bar {
+  background-color: #2394ee;
+  padding: 5px 100px 0px 0px;
+  padding-right: 100px; /*would have rather used percentages here but couldn't figure it out*/
+  height: 35px;
+}
+
+/*compress nav-bar icons*/
+.nav-bar img {
+  height: 17px;
+}
+
+/*restyle nav-bar link text*/
+.nav-bar li a {
+  font-weight: bold;
+  color: white;
+  font-size: 10.5px;
+  padding-right: 10px;
+}
+
+/*this approach to adding separators inspired by stack overflow user ajcw*/
+.nav-bar > div > ul > li > a > img {
+  background-image: url(../images/separator.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 10px;
+  margin: 0 auto;
+}
+
+/*second row is icon-bar*/
+.icon-bar {
+  background-image: url(../images/icon-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 110px;
+  padding-top: 20px;
+}
+
+/*removes list styling for nav-bar and icon-bar*/
+.icon-bar ul, .nav-bar ul {
+  list-style: none;
+}
+
+/*sprite styling for icons in icon-bar*/
+.sprite {
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-bars-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -5px -5px;
+}
+.sprite-bars-green {
+    width: 60px;
+    height: 73px;
+    background-position: -75px -5px;
+}
+.sprite-chat-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -145px -5px;
+}
+.sprite-chat-green {
+    width: 60px;
+    height: 73px;
+    background-position: -5px -88px;
+}
+.sprite-dash-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -75px -88px;
+}
+.sprite-dash-green {
+    width: 60px;
+    height: 73px;
+    background-position: -145px -88px;
+}
+.sprite-edit-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -5px -171px;
+}
+.sprite-edit-green {
+    width: 60px;
+    height: 73px;
+    background-position: -75px -171px;
+}
+.sprite-people-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -145px -171px;
+}
+.sprite-people-green {
+    width: 60px;
+    height: 73px;
+    background-position: -215px -5px;
+}
+.sprite-tag-blue {
+    width: 60px;
+    height: 73px;
+    background-position: -215px -88px;
+}
+.sprite-tag-green {
+    width: 60px;
+    height: 73px;
+    background-position: -215px -171px;
+}
+
+/*styling for two layers of icons (standard anad hover states)*/
+.front:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+.back {
+  margin-left: 1px;
+}
+.above {
+   position: absolute;
+  z-index: 2;
+}
+.below {
+   position: absolute;
+  z-index: 1;
+}
+
+/*Distributing icons across icon-bar*/
+#dash {
+  left: 25%;
+}
+#people {
+  left: 34%;
+}
+#chat {
+  left: 43%;
+}
+#tag {
+  left: 52%;
+}
+#edit {
+  left: 61%;
+}
+#bars {
+  left: 70%;
+}
+#arrow {
+  left: 26%;
+  bottom: 0%;
+  margin-bottom: -5px;
+}
+
+/*pixel-level adjustment for icon distribution*/
+.shift-left-2 {
+  margin-left: -2px;
+}
+.shift-left-1 {
+  margin-left: -1px;
+}
+
+/*CONTENT*/
+
+/*dashboard bar*/
+.dashboard {
+  background-color: #3dca6a;
+  border-radius: 5px;
+  padding: 20px 0px 10px 0px;
+  margin-top: 15px;
+}
+.dashboard h1 {
+  font-family: 'Hind', sans-serif;
+  font-size: 27px;
+  color: white;
+  margin: 0 auto;
+  display: inline;
+}
+
+/*search bar in dashboard*/
+.dashboard form {
+  float: right;
+  margin-top: -3px;
+}
+.dashboard form input {
+  border-color: #2db55b;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  background: url(../images/search.png);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: right;
+  padding-right: 5px;
+} /*thanks to stack overflow user Daniel Lew for the idea to do the icon as a background*/
