@@ -29,7 +29,8 @@
     </div> <!-- end nav bar -->
 
     <div class="row icon-bar">
-      <div class="col-md-12">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
         <ul class="horizontal">
           <li><div class="above" id="bars"><i class="sprite sprite-bars-green front"></i></div>
               <div class="below" id="bars"><i class="sprite sprite-bars-blue"></i></div></li>
@@ -47,6 +48,7 @@
               </li>
         </ul>
       </div>
+      <div class="col-md-3"></div>
     </div> <!-- end icon bar-->
 
 <!-- container includes dashboard/seach bar and all content sections -->
@@ -76,24 +78,40 @@
           <div class="row tiles">
             <div class="col-md-4">
               <!-- Column separated into rows to enable tile effect -->
-              <div class="row tasks border-right">
+              <div class="row tasks border-right border-bottom">
                 <div class="internal col-md-12">
                   <h2>Tasks</h2>
                   <i class="sprite2 sprite-grey-settings"></i>
                   <ul class="task-list"> <!-- ideas on how to use sprite as list-style-image from https://stackoverflow.com/questions/2381789/use-css-sprites-for-list-li-background-image -->
-                    <li id="task-1"><span class="bullet"><i class="sprite2 sprite-green-1"></i></span>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-1"></i></span>
                             <h3>Welcome Contacts</h3><span class="tag"><i class="sprite2 sprite-welcome"></i></span></li>
-                    <li id="task-2"><span class="bullet"><i class="sprite2 sprite-green-2"></i></span>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-2"></i></span>
                             <h3>Provide Responses</h3><span class="tag"><i class="sprite2 sprite-provide"></i></span></li>
-                    <li id="task-3"><span class="bullet"><i class="sprite2 sprite-green-3"></i></span>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-3"></i></span>
                             <h3>Review Activity</h3><span class="tag"><i class="sprite2 sprite-provide"></i></span></li>
-                    <li id="task-4"><span class="bullet"><i class="sprite2 sprite-green-4"></i></span>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-4"></i></span>
                             <h3>Reach Out</h3><span class="tag"><i class="sprite2 sprite-reach"></i></span></li>
                   </ul>
+                </div>
               </div> <!-- end tasks -->
-              <div class="row recs">
+              <div class="row recs border-right">
+                <div class="internal col-md-12">
+                  <h2>Recommendations</h2>
+                  <ul class="recs-list">
+                    <li><span class="bullet"><i class="sprite2 sprite-green-sheet"></i></span>
+                            <h6>Article</h6><p>7 Steps to getting more Fans</p></li>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-sheet"></i></span>
+                            <h6>Article</h6><p>Increase traction with more interactions</p></span></li>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-check"></i></span>
+                            <h6>Checklist</h6><p>Creating a Promotion</p></li>
+                    <li><span class="bullet"><i class="sprite2 sprite-green-bulb"></i></span>
+                            <h6>Tip</h6><p>Share More</p></li>
+                  </ul>
+                </div>
               </div> <!-- end recs -->
-            </div>
+            </div> <!--end first column of tiles (tasks and recs)-->
+            <div class="col-md-8">
+            </div> <!--end second column of tiles (analytics, contacts and didyouknow)-->
           </div> <!-- end tiles -->
 
           <div class="row banner">

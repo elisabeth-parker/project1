@@ -70,25 +70,25 @@
 
 /*Distributing icons across icon-bar*/
 #dash {
-  left: 25%;
+  left: 20%;
 }
 #people {
-  left: 34%;
+  left: 30%;
 }
 #chat {
-  left: 43%;
+  left: 40%;
 }
 #tag {
-  left: 52%;
+  left: 50%;
 }
 #edit {
-  left: 61%;
+  left: 60%;
 }
 #bars {
   left: 70%;
 }
 #arrow {
-  left: 26%;
+  left: 21.5%;
   bottom: 0%;
   margin-bottom: -5px;
 }
@@ -140,7 +140,7 @@
 /*styling for entire content div, incl gradient background*/
 .content {
   background-image: url(../images/gradient.png);
-  background-size: cover;  /*thanks to stack overflow user hendos43 for suggesting the background-size attribute*/
+  background-size: contain;  /*thanks to stack overflow user hendos43 for suggesting the background-size attribute*/
   margin: 0px -15px;
   background-repeat: no-repeat;
   margin-top: 20px;
@@ -171,6 +171,10 @@
 /*style for tiles with internal border-right*/
 .border-right {
   border-right: 0.5px solid #eeeeee;
+}
+
+.border-bottom {
+    border-bottom: 0.5px solid #eeeeee;
 }
 /*style for tiles with centered content*/
 .center {
@@ -220,28 +224,13 @@ h2 {
 .announcements a { /*left/right arrow buttons in announcements row*/
   margin: 3px;
 }
+.announcements a img:hover {
+  transform: scale(1.1);
+}
 
-/*TASKS*/
-/*styling for tasks tile*/
-.tasks .sprite-grey-settings {
-  float: right;
-  display: inline;
-  margin-right: 20px;
-}
-.tasks ul {
-  list-style: none;
-  padding: 0px;
-  margin-top: 20px;
-}
-.tasks li {
-  line-height: 40px;
-  padding: 15px 0px 5px 0px;
-  border-bottom: 0.5px solid #eeeeee;
-}
-.tasks li:last-child { /*remove border from last li*/
-  border: none;
-}
-.tasks h3 {
+/*TASKS AND RECS*/
+/*styling that tasks and recommendations tiles share*/
+.tasks h3, .recs h3 {
   font-family: 'Hind', sans-serif;
   font-size: 20px;
   color: #3399ff;
@@ -249,15 +238,19 @@ h2 {
   display: inline;
   vertical-align: super;
 }
-.tasks li .tag {
+
+.tasks ul, .recs ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
-/*interactive hover effects for tasks tile*/
-.tasks .sprite-grey-settings:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+.tasks li:last-child, .recs li:last-child { /*remove border from last li*/
+  border: none;
 }
-.tasks li:hover {
+
+.tasks li:hover, .recs li:hover {
   /*grayscale idea from w3schools https://www.w3schools.com/cssref/css3_pr_filter.asp*/
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100);
@@ -265,6 +258,24 @@ h2 {
 }
 
 
+/*TASKS ONLY*/
+.tasks .sprite-grey-settings {
+  float: right;
+  display: inline;
+  margin-right: 20px;
+}
+
+.tasks li {
+  line-height: 40px;
+  padding: 15px 0px 5px 0px;
+  border-bottom: 0.5px solid #eeeeee;
+}
+
+/*interactive hover effects for tasks tile*/
+.tasks .sprite-grey-settings:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 /*person+number images in task list*/
 .tag {
@@ -272,4 +283,46 @@ h2 {
   display: inline;
   vertical-align: super;
   margin-right: 20px;
+}
+
+
+/*RECOMMENDATIONS ONLY*/
+.recs {
+  padding: 20px 20px; /*so that bottom border on li doesn't extend to sides of div */
+}
+.recs li {
+  line-height: 40px;
+  padding: 15px 0px 5px 0px;
+  border-bottom: 0.5px dotted #eeeeee;
+}
+.recs h2 {
+  margin: 0px;
+}
+/*standardize width of bullets*/
+.recs-list .bullet {
+  width: 20px;
+  margin: 0px 20px 0px 0px;
+}
+
+/*h6 is used for superscript in recs tile*/
+.recs h6 {
+  font-family: 'Hind', sans-serif;
+  font-size: 10px;
+  color: #777777;
+  margin: 0px;
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+/*p is used for the primary text in recs tile*/
+.recs p {
+  font-family: 'Hind', sans-serif;
+  font-size: 17px;
+  color: #777777;
+  line-height: normal;
+  display: block;
+  text-align: left;
+  line-height: 100%;
 }
