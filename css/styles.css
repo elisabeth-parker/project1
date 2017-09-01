@@ -384,6 +384,7 @@ h2 {
   line-height: 20px;
   vertical-align: middle;
   margin: 10px;
+
 }
 
 /* Show the dropdown menu on hover */
@@ -398,18 +399,68 @@ h2 {
 .analytics h2, h5 {
   display: block;
 }
+/*activity col has darker border*/
+.activity {
+  border-right: 1px solid #cccccc;
+}
 
+/*h5 is used in this tile for the subtitles (ACTIVITY, CHANNELS, REFERRALS)*/
  h5 {
   font-family: 'Hind', sans-serif;
   font-size: 13px;
   color: #999999;
-  margin-left: 50px;
+  margin-left: 30px;
   display: inline;
   vertical-align: middle;
   text-align: left;
 }
 
-
-.analytics i {
+/*styling for graph images*/
+.sprite-graph {
+  margin: 30px 20px 20px 20px;
+}
+.donuts * {
   margin: 10px;
+  vertical-align: bottom;
+}
+.donuts .sprite2 {
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label{
+  background: url(../images/unchecked.png);
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  padding: 0px;
+}
+
+input[type="checkbox"]:checked + label{
+  background: url(../images/checked.png);
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  padding: 0px;
+}
+
+.social-tag {
+  display: inline-block;
+  border-radius: 5px;
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+  color: white;
+  display: inline;
+  vertical-align: middle;
+  text-align: left;
+  padding: 3px;
+}
+
+#fb {
+  background-color: #003366;
 }
