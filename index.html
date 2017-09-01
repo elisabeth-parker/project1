@@ -75,10 +75,21 @@
           </div> <!-- end announcements -->
           <div class="row tiles">
             <div class="col-md-4">
-              <div class="row tasks">
-                <div class="col-md-12">
+              <!-- Column separated into rows to enable tile effect -->
+              <div class="row tasks border-right">
+                <div class="internal col-md-12">
                   <h2>Tasks</h2>
                   <i class="sprite2 sprite-grey-settings"></i>
+                  <ul class="task-list"> <!-- ideas on how to use sprite as list-style-image from https://stackoverflow.com/questions/2381789/use-css-sprites-for-list-li-background-image -->
+                    <li id="task-1"><span class="bullet"><i class="sprite2 sprite-green-1"></i></span>
+                            <h3>Welcome Contacts</h3><span class="tag"><i class="sprite2 sprite-welcome"></i></span></li>
+                    <li id="task-2"><span class="bullet"><i class="sprite2 sprite-green-2"></i></span>
+                            <h3>Provide Responses</h3><span class="tag"><i class="sprite2 sprite-provide"></i></span></li>
+                    <li id="task-3"><span class="bullet"><i class="sprite2 sprite-green-3"></i></span>
+                            <h3>Review Activity</h3><span class="tag"><i class="sprite2 sprite-provide"></i></span></li>
+                    <li id="task-4"><span class="bullet"><i class="sprite2 sprite-green-4"></i></span>
+                            <h3>Reach Out</h3><span class="tag"><i class="sprite2 sprite-reach"></i></span></li>
+                  </ul>
               </div> <!-- end tasks -->
               <div class="row recs">
               </div> <!-- end recs -->

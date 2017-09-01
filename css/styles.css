@@ -136,6 +136,7 @@
 
 /*CONTENT*/
 
+/*GENERAL*/
 /*styling for entire content div, incl gradient background*/
 .content {
   background-image: url(../images/gradient.png);
@@ -150,6 +151,23 @@
   box-shadow: 0px 1px 1px grey;
 }
 
+/*tiles styling creates panel effect for content */
+.tiles {
+  margin: 0px 3px;
+  background-color: white;
+  padding-top: 15px;
+}
+
+/*remove shadow from rows w/in rows*/
+.row .row {
+  box-shadow: none;
+}
+
+/*remove padding from internal columns so borders can span full width*/
+.internal {
+  padding: 0px;
+}
+
 /*style for tiles with internal border-right*/
 .border-right {
   border-right: 0.5px solid #eeeeee;
@@ -161,11 +179,20 @@
 
 h2 {
   font-family: 'Hind', sans-serif;
-  font-size: 27px;
+  font-size: 30px;
   color: #3399ff;
-  margin-left: 5px;
+  margin-left: 20px;
   display: inline;
 }
+
+/*styling for sprites as list style items*/
+.bullet {
+  float: left;
+  display: inline;
+  margin-left: 20px;
+}
+
+/*ANNOUNCEMENTS*/
 /*announcements is the entire top row of main content*/
 /*info on how to center content vertically from Steven Bradley of Anseo Design*/
 .announcements {
@@ -194,16 +221,55 @@ h2 {
   margin: 3px;
 }
 
-.tiles {
-  margin: 0px 3px;
-  background-color: white;
-  padding-top: 15px;
-}
-
-.row .row {
-  box-shadow: none;
-}
-
-.tasks sprite-grey-settings {
+/*TASKS*/
+/*styling for tasks tile*/
+.tasks .sprite-grey-settings {
   float: right;
+  display: inline;
+  margin-right: 20px;
+}
+.tasks ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 20px;
+}
+.tasks li {
+  line-height: 40px;
+  padding: 15px 0px 5px 0px;
+  border-bottom: 0.5px solid #eeeeee;
+}
+.tasks li:last-child { /*remove border from last li*/
+  border: none;
+}
+.tasks h3 {
+  font-family: 'Hind', sans-serif;
+  font-size: 20px;
+  color: #3399ff;
+  margin-left: 15px;
+  display: inline;
+  vertical-align: super;
+}
+.tasks li .tag {
+}
+
+/*interactive hover effects for tasks tile*/
+.tasks .sprite-grey-settings:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.tasks li:hover {
+  /*grayscale idea from w3schools https://www.w3schools.com/cssref/css3_pr_filter.asp*/
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+  cursor: pointer;
+}
+
+
+
+/*person+number images in task list*/
+.tag {
+  float: right;
+  display: inline;
+  vertical-align: super;
+  margin-right: 20px;
 }
