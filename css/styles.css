@@ -41,7 +41,6 @@
 .icon-bar {
   background-image: url(../images/icon-background.png);
   background-position: center;
-  background-repeat: no-repeat;
   height: 110px;
   padding-top: 20px;
 }
@@ -51,72 +50,6 @@
   list-style: none;
 }
 
-/*sprite styling for icons in icon-bar*/
-.sprite {
-    background-image: url(../images/spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-.sprite-bars-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -5px -5px;
-}
-.sprite-bars-green {
-    width: 60px;
-    height: 73px;
-    background-position: -75px -5px;
-}
-.sprite-chat-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -145px -5px;
-}
-.sprite-chat-green {
-    width: 60px;
-    height: 73px;
-    background-position: -5px -88px;
-}
-.sprite-dash-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -75px -88px;
-}
-.sprite-dash-green {
-    width: 60px;
-    height: 73px;
-    background-position: -145px -88px;
-}
-.sprite-edit-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -5px -171px;
-}
-.sprite-edit-green {
-    width: 60px;
-    height: 73px;
-    background-position: -75px -171px;
-}
-.sprite-people-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -145px -171px;
-}
-.sprite-people-green {
-    width: 60px;
-    height: 73px;
-    background-position: -215px -5px;
-}
-.sprite-tag-blue {
-    width: 60px;
-    height: 73px;
-    background-position: -215px -88px;
-}
-.sprite-tag-green {
-    width: 60px;
-    height: 73px;
-    background-position: -215px -171px;
-}
 
 /*styling for two layers of icons (standard anad hover states)*/
 .front:hover {
@@ -168,7 +101,6 @@
   margin-left: -1px;
 }
 
-/*CONTENT*/
 
 /*dashboard bar*/
 .dashboard {
@@ -196,11 +128,82 @@
   border-width: 1px;
   border-radius: 2px;
 }
-
 .dashboard img {
-  /*float: right;*/
   z-index: 2;
   position: absolute;
   left: 95.5%;
+}
 
+/*CONTENT*/
+
+/*styling for entire content div, incl gradient background*/
+.content {
+  background-image: url(../images/gradient.png);
+  background-size: cover;  /*thanks to stack overflow user hendos43 for suggesting the background-size attribute*/
+  margin: 0px -15px;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  padding: 10px;
+
+}
+.content .row {
+  box-shadow: 0px 1px 1px grey;
+}
+
+/*style for tiles with internal border-right*/
+.border-right {
+  border-right: 0.5px solid #eeeeee;
+}
+/*style for tiles with centered content*/
+.center {
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Hind', sans-serif;
+  font-size: 27px;
+  color: #3399ff;
+  margin-left: 5px;
+  display: inline;
+}
+/*announcements is the entire top row of main content*/
+/*info on how to center content vertically from Steven Bradley of Anseo Design*/
+.announcements {
+  background-color: white;
+  border: 1px solid #efefef;
+  margin: 0px 3px;
+  line-height: 45px;
+}
+.announcements h4 {
+  font-family: 'Hind', sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+  color: #f57e20;
+  margin: 0px;
+  line-height: 45px;
+  vertical-align: middle;
+}
+.announcements p {
+  font-family: 'Hind', sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+  color: #777777;
+  margin: 0px;
+}
+.announcements a { /*left/right arrow buttons in announcements row*/
+  margin: 3px;
+}
+
+.tiles {
+  margin: 0px 3px;
+  background-color: white;
+  padding-top: 15px;
+}
+
+.row .row {
+  box-shadow: none;
+}
+
+.tasks sprite-grey-settings {
+  float: right;
 }

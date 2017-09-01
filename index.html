@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- sprite css -->
+    <link rel="stylesheet" href="css/spritestyles.css">
     <!-- Hind font family -->
     <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
@@ -47,25 +49,46 @@
       </div>
     </div> <!-- end icon bar-->
 
-<!-- container includes all content sections -->
+<!-- container includes dashboard/seach bar and all content sections -->
     <div class="container">
+        <div class="row dashboard">
+          <div class="col-md-12">
+            <h1>Dashboard</h1>
+            <a href="#"><img src="images/search.png"></a>
+            <form>
+              <input type="text" name="search">
+            </form>
+          </div>
+        </div> <!-- end dashboard -->
 
-      <div class="row dashboard">
-        <div class="col-md-12">
-          <h1>Dashboard</h1>
-          <a href="#"><img src="images/search.png"></a>
-          <form>
-            <input type="text" name="search">
-          </form>
-        </div>
-      </div> <!-- end dashboard -->
-      <div class="content">
-      <div class="row announcements">
-      </div> <!-- end announcements -->
-      <!-- content goes here  -->
-      <div class="row banner">
-      </div> <!-- end banner -->
-    </div> <!-- end container -->
+        <div class="content">
+          <div class="row announcements">
+            <div class="border-right col-md-2">
+              <h4>ANNOUNCEMENTS</h4>
+            </div>
+            <div class="border-right col-md-9">
+              <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus</p>
+            </div>
+            <div class="center col-md-1">
+              <a href="#"><img src="images/left.png"></a><a href="#"><img src="images/right.png"></a>
+            </div>
+          </div> <!-- end announcements -->
+          <div class="row tiles">
+            <div class="col-md-4">
+              <div class="row tasks">
+                <div class="col-md-12">
+                  <h2>Tasks</h2>
+                  <i class="sprite2 sprite-grey-settings"></i>
+              </div> <!-- end tasks -->
+              <div class="row recs">
+              </div> <!-- end recs -->
+            </div>
+          </div> <!-- end tiles -->
+
+          <div class="row banner">
+          </div> <!-- end banner -->
+      </div> <!-- end content -->
+    </div> <!--end container-->
 
 <!-- footer is outside of container to fill full width -->
     <div class="row footer">
