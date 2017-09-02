@@ -405,7 +405,7 @@ h2 {
 }
 
 /*h5 is used in this tile for the subtitles (ACTIVITY, CHANNELS, REFERRALS)*/
- h5 {
+.analytics h5 {
   font-family: 'Hind', sans-serif;
   font-size: 13px;
   color: #999999;
@@ -489,3 +489,116 @@ label:hover {
 }
 
 /*CONTACTS*/
+.contacts {
+  height: 300px;
+}
+/*hidden div that's large enough to contain silhouette images*/
+.outer {
+  position: absolute;
+  left: 15%;
+  height: 200px;
+  width: 240px;
+  margin: 50px 0px;
+  z-index: 2;
+  background-image: url(../images/ribbon-background.png);
+  background-repeat: no-repeat;
+  background-position: 0px 18px;
+}
+.outer:hover {
+  cursor: pointer;
+}
+/*doing the positioning for the silhouette this way feels so hacky :'(  */
+.outer img {
+  position: absolute;
+  margin: 0px auto;
+  z-index: 2;
+  left: 82px;
+  top: -21px;
+}
+
+/*inner div, visible, contains all other content*/
+.inner {
+  width: 210px;
+  margin: 0 auto;
+  text-align: center;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px #d9d9d9;
+  padding-top: 60px;
+  border-left: none;
+  border-right: none;
+}
+
+/*div for the text*/
+.ribbon {
+  background-color: #3399ff;
+  text-align: center;
+  padding: 5px;
+  margin-top: -1px;
+}
+
+/*styling for the graph images*/
+.sprite-green-line, .sprite-orange-line {
+  margin: 15px auto;
+  border: 1px solid #eeeeee;
+}
+
+/*h3 is the larger font (contacts/customers), h5 is the smaller (influencers)*/
+.contacts h3 {
+  font-family: 'Hind', sans-serif;
+  font-size: 20px;
+  color: white;
+  display: block;
+  vertical-align: super;
+  text-align: center;
+  margin: 0px;
+}
+.contacts h5 {
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 0px;
+}
+
+/*DIDYOUKNOW*/
+.didyouknow {
+  margin: 20px 15px;
+  background-color: #2498f4;
+  border-radius: 3px;
+}
+.didyouknow-nav-left, .didyouknow-nav-right {
+  width: 22px;
+  position: relative;
+  padding: 0px;
+}
+
+.didyouknow-nav-left img:hover, .didyouknow-nav-right img:hover {
+  cursor: pointer;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+}
+
+.didyouknow-nav-right  {
+  text-align: right;
+}
+.didyouknow-nav-right img {
+  float:right;
+  clear: right;
+}
+.didyouknow img {
+  position: absolute;
+  display: inline;
+  top: 50%;
+  transform: translateY(-50%);
+  /*thanks to stack overflow user Cthulhu for this tip on vertical alignment*/
+}
+.didyouknow h5 {
+  margin: 20px 50px 25px 40px;
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+  color: white;
+  display: block;
+  text-align: left;
+}
