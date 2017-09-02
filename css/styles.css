@@ -246,7 +246,7 @@ h2 {
   margin-bottom: 0px;
 }
 
-.tasks li:last-child, .recs li:last-child { /*remove border from last li*/
+.tasks li:last-child { /*remove border from last li*/
   border: none;
 }
 
@@ -375,6 +375,7 @@ h2 {
     border-bottom: 0.5px solid #eeeeee;
 }
 
+/*text in dropdown menu*/
 .analytics p {
   font-family: 'Hind', sans-serif;
   font-weight: lighter;
@@ -384,7 +385,6 @@ h2 {
   line-height: 20px;
   vertical-align: middle;
   margin: 10px;
-
 }
 
 /* Show the dropdown menu on hover */
@@ -427,28 +427,42 @@ h2 {
   margin-bottom: 15px;
 }
 
+/*social-col + buffer make up bottom row of analytics*/
+.social-col {
+  margin-top: 20px;
+}
+.social-col, .buffer {
+  padding-bottom: 20px;
+}
+
+/*hide standard checkbox*/
 input[type="checkbox"] {
   display: none;
 }
 
+/*replace standard checkbox with images*/
 input[type="checkbox"] + label{
   background: url(../images/unchecked.png);
   background-repeat: no-repeat;
   height: 22px;
   width: 22px;
   display: inline-block;
-  padding: 0px;
+  margin: 0px 2px 10px 10px;
 }
-
 input[type="checkbox"]:checked + label{
   background: url(../images/checked.png);
   background-repeat: no-repeat;
   height: 22px;
   width: 22px;
   display: inline-block;
-  padding: 0px;
+  margin: 0px 2px 10px 10px;
+}
+label:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
+/*styling for social media tags on checkboxes*/
 .social-tag {
   display: inline-block;
   border-radius: 5px;
@@ -456,11 +470,22 @@ input[type="checkbox"]:checked + label{
   font-size: 13px;
   color: white;
   display: inline;
-  vertical-align: middle;
-  text-align: left;
-  padding: 3px;
+  vertical-align: top;
+  text-align: center;
+  padding: 0px 8px;
+  margin-left: -3px;
 }
-
 #fb {
   background-color: #003366;
 }
+#twitter {
+  background-color: #3399ff;
+}
+#foursquare {
+  background-color: #336699;
+}
+#google {
+  background-color: #33cc66;
+}
+
+/*CONTACTS*/
