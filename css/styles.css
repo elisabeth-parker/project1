@@ -20,6 +20,10 @@
   height: 17px;
 }
 
+.nav-bar img:hover {
+  transform: scale(1.1);
+}
+
 /*restyle nav-bar link text*/
 .nav-bar li a {
   font-weight: bold;
@@ -147,8 +151,13 @@
   padding: 10px;
 
 }
-.content .row {
-  box-shadow: 0px 1px 1px grey;
+.content-box-shadow {
+  box-shadow: 0px 1px 2px grey;
+}
+
+.content-box-shadow .row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*tiles styling creates panel effect for content */
@@ -289,6 +298,7 @@ h2 {
 /*RECOMMENDATIONS ONLY*/
 .recs {
   padding: 20px 20px; /*so that bottom border on li doesn't extend to sides of div */
+  margin-bottom: -100px;
 }
 .recs li {
   line-height: 40px;
@@ -564,29 +574,15 @@ label:hover {
 
 /*DIDYOUKNOW*/
 .didyouknow {
-  margin: 20px 15px;
+  margin: 20px 30px;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+  /*i know using !important is super not kosher, but couldn't figure out another way to make this work*/
   background-color: #2498f4;
   border-radius: 3px;
 }
-.didyouknow-nav-left, .didyouknow-nav-right {
-  width: 22px;
-  position: relative;
-  padding: 0px;
-}
 
-.didyouknow-nav-left img:hover, .didyouknow-nav-right img:hover {
-  cursor: pointer;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100);
-}
-
-.didyouknow-nav-right  {
-  text-align: right;
-}
-.didyouknow-nav-right img {
-  float:right;
-  clear: right;
-}
+/*styling for arrows*/
 .didyouknow img {
   position: absolute;
   display: inline;
@@ -594,6 +590,26 @@ label:hover {
   transform: translateY(-50%);
   /*thanks to stack overflow user Cthulhu for this tip on vertical alignment*/
 }
+.didyouknow-nav-left, .didyouknow-nav-right {
+  width: 22px;
+  position: relative;
+  padding: 0px;
+}
+.didyouknow-nav-left img:hover, .didyouknow-nav-right img:hover {
+  cursor: pointer;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+}
+.didyouknow-nav-right  {
+  text-align: right;
+  padding-right: 22px;
+}
+.didyouknow-nav-right img {
+  float:right;
+  clear: right;
+}
+
+/*all didyounow text is one h5*/
 .didyouknow h5 {
   margin: 20px 50px 25px 40px;
   font-family: 'Hind', sans-serif;
@@ -601,4 +617,109 @@ label:hover {
   color: white;
   display: block;
   text-align: left;
+}
+
+/*AD BANNER*/
+
+/*inline-flex used so inner-ad divs will expand to fit image content*/
+.banner div {
+  display: inline-flex;
+}
+.banner {
+  background-color: #3399ff;
+}
+
+/*white background div for each ad*/
+.inner-ad {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px #006699;
+  margin: 30px 15px;
+  max-height: 160px;
+  min-height: 160px;
+  min-width: 268px;
+}
+.inner-ad:hover {
+  cursor: pointer;
+}
+
+.inner-ad img {
+  vertical-align: top;
+}
+
+/*ad-2 has some specific styling so it can extend above top of inner-ad div*/
+.ad-2 img {
+  position: absolute;
+  top: 19px;
+  border-radius: 5px;
+}
+
+
+/*FOOTER*/
+.footer {
+  background-color: #f4f4f4;
+  border-top: 1px solid white;
+  box-shadow: 0px -2px 5px #e2e2e2;
+  font-family: 'Hind', sans-serif;
+  font-size: 14px;
+}
+
+.footer * {
+  display: inline;
+}
+.footer ul {
+  list-style: none;
+  padding: 0px;
+}
+.footer .horizontal li {
+  float: left;
+  margin: 10px;
+}
+
+.footer li {
+  background-image: url(../images/footer-separator.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 10px;
+  margin: 0 auto;
+
+  vertical-align: middle;
+}
+
+.footer .menu a {
+  color: #999999;
+}
+
+.footer li:first-of-type {
+  background-image: none;
+}
+.footer li:hover {
+  color: #2498f2;
+  cursor: pointer;
+}
+.footer .menu {
+  padding: 0px;
+}
+
+.footer .border-right {
+  border-right: 1px solid #dddddd;
+}
+.promo p {
+  float: left;
+  color: #777777;
+  vertical-align: middle;
+  margin: 10px;
+}
+.promo p a {
+  font-weight: bold;
+  color: #2498f2;
+  vertical-align: bottom;
+}
+.promo img {
+  float: right;
+  margin: 15px 10px;
+}
+
+.promo img:hover {
+  transform: scale(1.1);
 }
