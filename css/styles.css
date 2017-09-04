@@ -77,19 +77,19 @@
   left: 20%;
 }
 #people {
-  left: 30%;
+  left: 31%;
 }
 #chat {
-  left: 40%;
+  left: 42%;
 }
 #tag {
-  left: 50%;
+  left: 53%;
 }
 #edit {
-  left: 60%;
+  left: 64%;
 }
 #bars {
-  left: 70%;
+  left: 75%;
 }
 #arrow {
   left: 21.5%;
@@ -298,7 +298,7 @@ h2 {
 /*RECOMMENDATIONS ONLY*/
 .recs {
   padding: 20px 20px; /*so that bottom border on li doesn't extend to sides of div */
-  margin-bottom: -100px;
+  padding-bottom: 210px;
 }
 .recs li {
   line-height: 40px;
@@ -667,6 +667,8 @@ label:hover {
 .footer * {
   display: inline;
 }
+
+/*remove standard list styling from menu items*/
 .footer ul {
   list-style: none;
   padding: 0px;
@@ -682,21 +684,22 @@ label:hover {
   background-position: top left;
   padding-left: 10px;
   margin: 0 auto;
-
   vertical-align: middle;
 }
 
 .footer .menu a {
   color: #999999;
 }
-
+/*no separator on first menu item*/
 .footer li:first-of-type {
   background-image: none;
 }
+
 .footer li:hover {
   color: #2498f2;
   cursor: pointer;
 }
+
 .footer .menu {
   padding: 0px;
 }
@@ -704,22 +707,54 @@ label:hover {
 .footer .border-right {
   border-right: 1px solid #dddddd;
 }
+
+/*promo is the long div with lots of text*/
 .promo p {
   float: left;
   color: #777777;
   vertical-align: middle;
   margin: 10px;
 }
-.promo p a {
+.promo p a, .logout p a {
   font-weight: bold;
   color: #2498f2;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .promo img {
   float: right;
   margin: 15px 10px;
 }
-
 .promo img:hover {
   transform: scale(1.1);
+}
+
+/*logout is the div with the car img and "logout"*/
+.logout * {
+  display: inline;
+}
+.logout a {
+  margin: 5px;
+}
+#car {
+  border: 4px solid white;
+  border-radius: 2px;
+  box-shadow: 0px 3px 3px #d0d0d0;
+  margin: 5px auto;
+}
+
+/*social is the 4 square social media platform icons*/
+.social {
+  text-align: center;
+}
+/*images appear grey by default*/
+.social img {
+  margin-top: 15px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+}
+/*color version appears on hover*/
+.social img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+  cursor: pointer;
 }
