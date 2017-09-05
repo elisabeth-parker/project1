@@ -1,0 +1,139 @@
+/*custom styles for mobile version*/
+/*by Elisabeth Parker*/
+
+@media only screen and (max-width: 500px) {
+
+  /*nav-bar*/
+  .nav-bar {
+    padding-right: 0px;
+  }
+
+  /*Distributing icons across icon-bar*/
+  .icon-bar {
+    padding-bottom: 60px;
+  }
+  #dash {
+    left: 5%;
+  }
+  #people {
+    left: 22%;
+  }
+  #chat {
+    left: 38%;
+  }
+  #tag {
+    left: 54%;
+  }
+  #edit {
+    left: 68%;
+  }
+  #bars {
+    left: 80%;
+  }
+  #arrow {
+    left: 6%;
+    bottom: 0%;
+    margin-bottom: -70px;
+  }
+
+  .dashboard {
+    margin: 10px 0px;
+  }
+
+  .dashboard img {
+    left: 85%;
+  }
+
+  .content{
+    margin-top: 10px;
+  }
+
+  .announcements {
+    line-height: 20px;
+  }
+
+  .announcements .center {
+    margin: 10px 0px;
+  }
+
+  .recs {
+    padding-bottom: 25px;
+  }
+
+  .donuts {
+    padding: 0px;
+    margin: 0px 10px;
+  }
+  .donuts div {
+    display: inline-flex;
+    width: 40%;
+    margin: 0px 10px;
+  }
+  .donuts div * {
+    margin: 10px 0px;
+  }
+
+  .social-col {
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .social-tag {
+    font-size: 10px;
+    line-height: 20px;
+    margin-left: -5px;
+  }
+  .contacts {
+    min-height: 600px;
+  }
+  .contact-card {
+    min-height: 300px;
+  }
+
+  .didyouknow-nav-left img {
+      transform: translateY(85%);
+  }
+
+  .didyouknow-nav-right img {
+    transform: translate(1355%, -200%);
+  }
+
+  .banner div {
+    display: block;
+  }
+
+  .ad-2 img {
+    position: absolute;
+    top: 209px;
+    left: 57px;
+    border-radius: 5px;
+  }
+
+  .inner-ad {
+    width: 268px;
+    margin: 30px auto;
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+
+  .footer .promo .m-show {
+    float: right;
+    color: #2498f2;
+    font-weight: bold;
+    margin-right: 0px;
+  }
+
+  .m-hide {
+    display: none;
+  }
+
+  .m-show {
+    display: inline;
+  }
+
+  .col-sm-0 {
+    display: none !important;
+  }
+
+}
