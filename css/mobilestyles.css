@@ -36,30 +36,35 @@
     margin-bottom: -70px;
   }
 
+/*realigning dashboard content*/
   .dashboard {
     margin: 10px 0px;
   }
-
   .dashboard img {
     left: 85%;
   }
-
   .content{
     margin-top: 10px;
   }
 
+/*adjusting spacing in announcements tile*/
   .announcements {
     line-height: 20px;
   }
-
   .announcements .center {
     margin: 10px 0px;
   }
 
+/*removing extra space from bottom of recommendations tile*/
   .recs {
     padding-bottom: 25px;
   }
 
+/*fixing styling (primarily spacing) in analytics tile. activity is large chart, donuts are round charts,
+      social-col and social-tag are labelled forms w/ social media options*/
+  .activity {
+    border: none;
+  }
   .donuts {
     padding: 0px;
     margin: 0px 10px;
@@ -72,7 +77,6 @@
   .donuts div * {
     margin: 10px 0px;
   }
-
   .social-col {
     padding: 0px;
     margin-top: 10px;
@@ -82,6 +86,8 @@
     line-height: 20px;
     margin-left: -5px;
   }
+
+  /*correcting spacing for contacts tile*/
   .contacts {
     min-height: 600px;
   }
@@ -89,49 +95,72 @@
     min-height: 300px;
   }
 
+/*correcting spacing for didyouknow tile*/
   .didyouknow-nav-left img {
       transform: translateY(85%);
   }
-
   .didyouknow-nav-right img {
     transform: translate(1355%, -200%);
   }
 
+/*correcting spacing in advertisement banner*/
   .banner div {
     display: block;
   }
-
   .ad-2 img {
     position: absolute;
     top: 209px;
     left: 57px;
     border-radius: 5px;
   }
-
   .inner-ad {
     width: 268px;
     margin: 30px auto;
   }
 
+/*correcting spacing in footer*/
   .footer {
     margin-top: 10px;
+    max-height: 40px;
   }
-
-  .footer .promo .m-show {
-    float: right;
+  .footer .menu {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .footer .horizontal li {
+    margin: 0px;
+    padding: 0px 10px;
+  }
+  .footer .promo p {
     color: #2498f2;
     font-weight: bold;
-    margin-right: 0px;
+    margin: 10px;
+  }
+  .footer .logout {
+    padding: 5px 10px;
+  }
+  .footer .logout p {
+    margin: auto 0px;
+  }
+  .footer .logout a {
+    margin: 0px;
+  }
+  #car {
+    height: 20px;
+    width: 20px;
   }
 
+  /*hide all content used only for fullscren*/
   .m-hide {
     display: none;
   }
 
+/*show content used only for mobile*/
   .m-show {
     display: inline;
   }
 
+/*hide buffers used in fullscreen*/
   .col-sm-0 {
     display: none !important;
   }

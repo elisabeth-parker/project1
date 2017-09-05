@@ -1,0 +1,11 @@
+.sprite {
+    background-image: url(../images/spritesheet3.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-green-4 {
+    width: 24px;
+    height: 24px;
+    background-position: -5px -5px;
+}

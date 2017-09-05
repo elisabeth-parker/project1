@@ -235,3 +235,17 @@
     height: 30px;
     background-position: -943px -190px;
 }
+
+
+/*THIRD SPRITESHEET: correcting mis-sliced image*/
+.sprite3 {
+  background-image: url(../images/spritesheet3.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-green-4 {
+    width: 24px;
+    height: 24px;
+    background-position: -5px -5px;
+}
