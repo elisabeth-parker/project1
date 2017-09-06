@@ -21,7 +21,7 @@
   padding-bottom: 3px;
 }
 
-.nav-bar img:hover {
+.nav-bar a:hover img {
   transform: scale(1.1);
 }
 
@@ -31,6 +31,16 @@
   color: white;
   font-size: 10.5px;
   padding-right: 10px;
+}
+
+.nav-bar li a:hover {
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.nav-bar li a:active {
+  transform: scale(1.2);
+  font-size: 12px;
 }
 
 /*this approach to adding separators inspired by stack overflow user ajcw*/
@@ -57,9 +67,11 @@
 
 
 /*styling for two layers of icons (standard anad hover states)*/
-.front:hover {
+.icon-bar a:hover i {
     opacity: 0;
-    cursor: pointer;
+}
+.icon-bar a:active i {
+  opacity: 0.5;
 }
 .back {
   margin-left: 1px;
@@ -72,6 +84,7 @@
    position: absolute;
   z-index: 1;
 }
+
 
 /*Distributing icons across icon-bar*/
 #dash {
@@ -238,6 +251,10 @@ h2 {
   transform: scale(1.1);
 }
 
+.announcements a img:active {
+  transform: scale(1.2);
+}
+
 /*TASKS AND RECS*/
 /*styling that tasks and recommendations tiles share*/
 .tasks h3, .recs h3 {
@@ -260,11 +277,18 @@ h2 {
   border: none;
 }
 
-.tasks li:hover, .recs li:hover {
+.tasks a:hover li, .recs a:hover li {
   /*grayscale idea from w3schools https://www.w3schools.com/cssref/css3_pr_filter.asp*/
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100);
-  cursor: pointer;
+
+}
+.tasks a:hover, .recs a:hover {
+  text-decoration: none;
+}
+
+.tasks a:active li, .recs a:active li {
+  transform: scale(0.95);
 }
 
 
@@ -403,8 +427,9 @@ h2 {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on hover and active */
 .dropdown-content p:hover {color: #3399ff;}
+.dropdown-content p:active {text-decoration: underline;}
 
 /*STYLING FOR ANALYTICS TILE OTHER THAN DROPDOWN*/
 .analytics h2, h5 {
@@ -515,9 +540,16 @@ label:hover {
   background-repeat: no-repeat;
   background-position: 0px 18px;
 }
-.outer:hover {
-  cursor: pointer;
+
+.contacts a:hover div {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
 }
+.contacts a:active div {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+}
+
 /*doing the positioning for the silhouette this way feels so hacky :'(  */
 .outer img {
   position: absolute;
@@ -596,11 +628,11 @@ label:hover {
   position: relative;
   padding: 0px;
 }
-.didyouknow-nav-left img:hover, .didyouknow-nav-right img:hover {
-  cursor: pointer;
+.didyouknow-nav-left a:hover, .didyouknow-nav-right a:hover {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100);
 }
+
 .didyouknow-nav-right  {
   text-align: right;
   padding-right: 22px;
@@ -640,10 +672,13 @@ label:hover {
   min-height: 160px;
   min-width: 268px;
 }
-.inner-ad:hover {
+.banner a:hover {
   cursor: pointer;
 }
-
+.banner a:active div img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100);
+}
 .inner-ad img {
   vertical-align: top;
 }
@@ -668,6 +703,18 @@ label:hover {
 
 .footer * {
   display: inline;
+}
+
+/*styling for links in footer*/
+.footer a:active {
+  color: grey;
+}
+.footer li:hover {
+  color: #2498f2;
+  cursor: pointer;
+}
+.footer li a:active {
+  color: #2498f2;
 }
 
 /*remove standard list styling from menu items*/
@@ -695,11 +742,6 @@ label:hover {
 /*no separator on first menu item*/
 .footer li:first-of-type {
   background-image: none;
-}
-
-.footer li:hover {
-  color: #2498f2;
-  cursor: pointer;
 }
 
 .footer .menu {
